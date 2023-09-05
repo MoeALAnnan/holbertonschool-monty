@@ -45,6 +45,7 @@ exit(EXIT_FAILURE); }
 		free(func); }
 	if (line)
 		free(line);
+	free_t(stack);
 	fclose(file_in);
 	return (0); }
 
