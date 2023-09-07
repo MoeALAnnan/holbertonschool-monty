@@ -28,6 +28,8 @@ instruction_t *get_function(char *line)
 			func->f = _pall;
 		if (strcmp(func->opcode, "pint") == 0)
 			func->f = _pint;
+		if (strcmp(func->opcode, "pop") == 0)
+			func->f = _pop;
 	}
 	return (func);
 }
