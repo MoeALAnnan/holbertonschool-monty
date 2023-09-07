@@ -1,4 +1,5 @@
 #include "monty.h"
+int ARG = 1;
 /**
  * main - main function
  * @argc: int

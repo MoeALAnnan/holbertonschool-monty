@@ -21,7 +21,7 @@ void free_t(stack_t *stack)
  *is_int - is_int
  *@str:str
  *Return: void
-*/
+ */
 int is_int(char *str)
 {
 	int i = 0;
@@ -41,7 +41,7 @@ int is_int(char *str)
  *_push - _push
  *@stack: satck
  *@line_number:line_number
-*/
+ */
 void _push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new, *tmp;
@@ -66,6 +66,13 @@ void _push(stack_t **stack, unsigned int line_number)
 	/** checks if stack is empty **/
 	if ((*stack) == NULL)
 		*stack = new;
+	else if (ARG)
+	{
+		/** puts new node on top if not empty **/
+		(*stack)->prev = new;
+		new->next = *stack;
+		*stack = new;
+	}
 	else
 	{
 		/**puts new node on the bottom **/
@@ -74,5 +81,25 @@ void _push(stack_t **stack, unsigned int line_number)
 			tmp = tmp->next;
 		tmp->next = new;
 		new->prev = tmp;
+	}
+}
+
+/**
+ * pall - print all values
+ *
+ * @stack: head stack
+ * @line_number: current line number
+ */
+
+void _pall(stack_t **stack, unsigned int line_number)
+{
+	stack_t *tmp;/* = *stack;*/
+	(void) line_number;
+	tmp = *stack;
+	/*while (stack && tmp)*/
+	while (tmp != NULL)
+	{
+		printf("%d\n", tmp->n);
+		tmp = tmp->next;
 	}
 }
