@@ -40,5 +40,7 @@ typedef struct instruction_s
 extern int ARG;
 int main(int argc, char **argv);
 instruction_t *get_function(char *line);
+void free_t(stack_t *stack);
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
+#endif
