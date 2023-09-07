@@ -26,7 +26,7 @@ instruction_t *get_function(char *line)
 			func->f = _push;
 		if (strcmp(func->opcode, "pall") == 0)
 			func->f = _pall;
-		if (strcmp(func->opcode, "pall") == 0)
+		if (strcmp(func->opcode, "pint") == 0)
 			func->f = _pint;
 	}
 	return (func);
