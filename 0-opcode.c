@@ -85,7 +85,7 @@ void _push(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pall - print all values
+ * _pall - print all values
  *
  * @stack: head stack
  * @line_number: current line number
