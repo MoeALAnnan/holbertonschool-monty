@@ -32,9 +32,9 @@ instruction_t *get_function(char *line)
 			func->f = _pop;
 		if (strcmp(func->opcode, "swap") == 0)
 			func->f = _swap;
-		if (strcmp(func->opcode, "add") == 0);
+		if (strcmp(func->opcode, "add") == 0)
 			func->f = _add;
-		if (strcmp(func->opcode, "nop") == 0);
+		if (strcmp(func->opcode, "nop") == 0)
 			func->f = _nop;
 
 	}
