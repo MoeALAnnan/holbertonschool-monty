@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	{fprintf(stderr, "USAGE: monty file\n"), exit(EXIT_FAILURE); }
 	file_in = fopen(argv[1], "r");
 	if (file_in == NULL)
-	{fprintf(stderr, "error: Can't open file %s\n", argv[1]);
+	{fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 exit(EXIT_FAILURE); }
 	while (getline(&line, &linesize_t, file_in) != -1)
 	{line_number++;
